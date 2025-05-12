@@ -1,0 +1,16 @@
+/*
+ * Output:
+   Enter a string: Technology
+   The Reverse string is: ygolonhceT
+*/
+
+let string = "Archer";
+console.log(reverseString(string));
+
+function reverseString(str){
+    let reversed = "";
+    for(let i=str.length - 1; i >=0; i-- ){
+        reversed += str[i];
+    }
+    return reversed;
+}
