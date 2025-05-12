@@ -1,0 +1,12 @@
+/*
+ * Output:
+   Enter a string: Technology
+   The Reverse string is: ygolonhceT
+*/
+
+let string = "Technology";
+console.log(reverseString(string));
+
+function reverseString(str){
+  return str.split("").reverse().join("");
+}
