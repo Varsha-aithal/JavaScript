@@ -1,0 +1,21 @@
+/* Write a function to check whether a given String is Palindrome or Not.
+
+Input1: Madam
+Output1: Madam is a Palindrome
+
+Input2: Apple
+Output2: Apple is Not a Palindrome
+*/
+
+console.log(checkPalindrome("Madam"));
+console.log(checkPalindrome("Apple"));
+function checkPalindrome(word){
+    let reverse = "";
+    for( let i = word.length - 1; i >= 0; i--){
+        reverse += word[i];
+    }
+    if (reverse.toLowerCase() === word.toLowerCase())
+        return word + " is a Palindrome";
+    else
+        return word + " is Not a Palindrome";
+}
