@@ -1,0 +1,31 @@
+/* Write a function that checks whether two strings are Anagrams or Not.
+
+Input: ("listen", "silent")
+Output: true
+
+Input: ("hard", "soft")
+Output: false 
+*/
+
+console.log(isAnagram("listen", "silent"));
+console.log(isAnagram("hard", "soft"));
+
+//Methond 1
+function isAnagram(str1, str2) {
+    const sortedStr1 = str1.split('').sort().join('');
+    const sortedStr2 = str2.split('').sort().join('');
+    return sortedStr1 === sortedStr2;
+}
+
+//Method 2
+function isAnagram(str1, str2) {
+    str1 = str1.replace(/\s+/g, '').toLowerCase();
+    str2 = str2.replace(/\s+/g, '').toLowerCase();
+    // If lengths are not equal, they cannot be anagrams                                          
+    if (str1.length !== str2.length) {
+        return false;
+    }
+    str1 = str1.split('').sort().join('');
+    str2 = str2.split('').sort().join('');
+    return str1 === str2;
+}
